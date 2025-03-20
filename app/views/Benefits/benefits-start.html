@@ -1,0 +1,94 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Start page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+
+{% block beforeContent %}
+
+  {{ govukBreadcrumbs({
+    items: [
+      {
+        text: "Home",
+        href: "/start"
+      },
+      {
+        text: "Benefit claim"
+       
+      }
+    ]
+  }) }}
+
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+        Check the application status of a benefit claim
+      </h1>
+
+      <p>Check the status of a benefit claim, including:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>Universal credit</li>
+        <li>Job seeker allowance</li>
+        <li>Child tax credit</li>
+        <li>Working tax credit</li>
+      </ul>
+
+      <h2 class="govuk-heading-m">
+        Before you start</h2>
+        <p class="govuk-body">You will need:</p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>Your application tracking number</li>
+          <li>Your date of birth</li>
+          </ul>
+      
+      {{ govukButton({
+        text: "Start now",
+        href: "../benefits/benefit-type",
+        isStartButton: true
+      }) }}
+
+  
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+
+      <aside class="govuk-prototype-kit-common-templates-related-items" role="complementary">
+        <h2 class="govuk-heading-m" id="subsection-title">
+          Subsection
+        </h2>
+        <nav role="navigation" aria-labelledby="subsection-title">
+          <ul class="govuk-list govuk-!-font-size-16">
+            <li>
+              <a href="#">
+                Related link
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Related link
+              </a>
+            </li>
+            <li>
+              <a href="#" class="govuk-!-font-weight-bold">
+                More <span class="govuk-visually-hidden">in Subsection</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+
+    </div>
+  </div>
+
+{% endblock %}

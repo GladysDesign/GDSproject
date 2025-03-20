@@ -1,0 +1,115 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Confirmation page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      {{ govukPanel({
+        titleText: "Application complete",
+        html: "Your reference number<br><strong>{% data['passport-tracking-nb'] %}</strong>"
+      }) }}
+
+      <p>
+        We have sent you a confirmation email with instruction on your next steps to collect your passport.
+      </p>
+
+      <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+   
+
+
+      {% from "govuk/components/table/macro.njk" import govukTable %}
+
+      {{ govukTable({
+        caption: "Application history",
+        captionClasses: "govuk-table__caption--m",
+        firstCellIsHeader: true,
+        head: [
+          {
+            text: "Event"
+          },
+          {
+            text: "Date"
+          }
+        ],
+        rows: [
+        [
+            {
+              text: "Application in review"
+            },
+            {
+              text: "17 March 2025"
+            }
+          ], 
+          [
+            {
+              text: "Documents submitted by applicant"
+            },
+            {
+              text: "15 March 2025"
+            }
+          ],  
+          [
+          {
+            text: "Applicant contacted more information"
+          },
+          {
+            text: "10 March 2025"
+          }
+        ],
+          [
+            {
+              text: "Application in review"
+            },
+            {
+              text: "7 March 2025"
+            }
+          ],
+          [
+            {
+              text: "Application submitted"
+            },
+            {
+              text: "5 March 2025"
+            }
+          ]
+        ]
+      }) }}
+
+    </div>
+    <div class="govuk-grid-column-one-third">
+
+      <aside class="govuk-prototype-kit-common-templates-related-items" role="complementary">
+        <h2 class="govuk-heading-m" id="subsection-title">
+          Track status of other application
+        </h2>
+        <nav role="navigation" aria-labelledby="subsection-title">
+          <ul class="govuk-list govuk-!-font-size-16">
+            <li>
+              <a href="../passport/passport-start.html">
+                Check passport status
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Benefit claim
+              </a>
+            </li>
+            <li>
+              <a href="#" class="govuk-!-font-weight-bold">
+                More <span class="govuk-visually-hidden">in Subsection</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+
+    </div>
+    
+  </div>
+
+{% endblock %}

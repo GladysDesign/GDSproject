@@ -1,0 +1,101 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Mainstream guide example
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for this page -->
+  {{ govukHeader() }}
+{% endblock %}
+
+{% block beforeContent %}
+
+  {{ govukBreadcrumbs({
+    items: [
+      {
+        text: "Home",
+        href: "http://www.gov.uk"
+      },
+      {
+        text: "Track my applicaiton"
+        
+      }
+      
+    ]
+  }) }}
+
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+       {{serviceName}}
+      </h1>
+      <p class="govuk-body-l">
+        This service allows citizens to track and manage the status of their
+applications for various government services
+      </p>
+    <aside>
+      <ul class="govuk-list">
+        <li>
+          <a class="govuk-link" href="../passport/passport-start">Passport progress tracking</a>
+        </li>
+        <li>
+          <a class="govuk-link" href="../benefits/benefits-start">Benefit claim</a>
+        </li>
+        <li>
+          <a class="govuk-link" href="#">Electronic travel authorisation (ETA)</a>
+        </li>
+       
+      </ul>
+    </aside>
+
+    
+
+    </div>
+
+  </div>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds govuk-prototype-kit-common-templates-mainstream-guide-body">
+      
+      <!-- <h2 class="govuk-heading-m">
+        Page content heading
+      </h2>
+      
+      <p>Content goes here.</p>
+
+      <nav class="govuk-prototype-kit-common-templates-pagination" role="navigation" aria-label="Pagination">
+
+      {{ govukPagination({
+        previous: {
+          labelText: "Page 1 title",
+          href: "#"
+        },
+        next: {
+          labelText: "Page 3 ti §§§§tle",
+          href: "#"
+        }
+      }) }} -->
+
+      
+
+    </div>
+
+    
+
+  </main>
+</div>
+
+
+
+
+
+    </div>
+  </div>
+
+{% endblock %}

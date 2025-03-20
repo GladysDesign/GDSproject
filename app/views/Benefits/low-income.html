@@ -1,0 +1,65 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="/benefits/tracking-number" method="post">
+
+        {% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+{{ govukRadios({
+  name: "lowincometype",
+  fieldset: {
+    legend: {
+      text: "Select the benefit to check?",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--l"
+    }
+  },
+  items: [
+    {
+      value: "universalcredit",
+      text: "Universal Credit"
+    },
+    {
+      value: "housingbenefit",
+      text: "Housing Benefit"
+    },
+    {
+      value: "workingtaxcredit",
+      text: "Working Tax Credit"
+    },
+    {
+      value: "childtaxcredit",
+      text: "Child Tax Credit"
+    },
+    {
+      value: "jsa",
+      text: "Jobseeker's Allowance (JSA)"
+    }
+  ]
+}) }}
+
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
