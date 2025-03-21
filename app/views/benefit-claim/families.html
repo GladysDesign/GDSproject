@@ -16,7 +16,8 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <form class="form" action="/benefits/tracking-number" method="post">
+
+      <form class="form" action="/benefit-claim/tracking-number" method="post">
 
         {% from "govuk/components/radios/macro.njk" import govukRadios %}
 
@@ -32,23 +33,27 @@
   items: [
     {
       value: "universalcredit",
-      text: "Carer's Allowance"
+      text: "Child Benefit"
     },
     {
       value: "housingbenefit",
-      text: "Bereavement Support Payment"
+      text: "Maternity Allowance"
     },
     {
       value: "workingtaxcredit",
-      text: "Council Tax Support/Reduction"
+      text: "Maternity Pay and Leave"
     },
     {
       value: "childtaxcredit",
-      text: "Winter Fuel Payment"
+      text: "Paternity Pay and Leave"
     },
     {
       value: "jsa",
-      text: "Discretionary payments"
+      text: "Shared Parental Leave and Pay"
+    },
+    {
+      value: "jsa",
+      text: "Adoption Pay and Leave"
     }
   ]
 }) }}

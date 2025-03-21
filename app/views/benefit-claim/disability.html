@@ -17,7 +17,7 @@
     <div class="govuk-grid-column-two-thirds">
 
 
-      <form class="form" action="/benefits/tracking-number" method="post">
+      <form class="form" action="/benefit-claim/tracking-number" method="post">
 
         {% from "govuk/components/radios/macro.njk" import govukRadios %}
 
@@ -33,27 +33,23 @@
   items: [
     {
       value: "universalcredit",
-      text: "Child Benefit"
+      text: "Employment and Support Allowance (ESA)"
     },
     {
       value: "housingbenefit",
-      text: "Maternity Allowance"
+      text: "Personal Independence Payment (PIP)"
     },
     {
       value: "workingtaxcredit",
-      text: "Maternity Pay and Leave"
+      text: "Attendance Allowance:"
     },
     {
       value: "childtaxcredit",
-      text: "Paternity Pay and Leave"
+      text: "Disability Living Allowance (DLA)"
     },
     {
       value: "jsa",
-      text: "Shared Parental Leave and Pay"
-    },
-    {
-      value: "jsa",
-      text: "Adoption Pay and Leave"
+      text: "Severe Disablement Allowance"
     }
   ]
 }) }}

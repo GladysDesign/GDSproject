@@ -16,8 +16,7 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-
-      <form class="form" action="/benefits/tracking-number" method="post">
+      <form class="form" action="/benefit-claim/tracking-number" method="post">
 
         {% from "govuk/components/radios/macro.njk" import govukRadios %}
 
@@ -33,23 +32,23 @@
   items: [
     {
       value: "universalcredit",
-      text: "Employment and Support Allowance (ESA)"
+      text: "Universal Credit"
     },
     {
       value: "housingbenefit",
-      text: "Personal Independence Payment (PIP)"
+      text: "Housing Benefit"
     },
     {
       value: "workingtaxcredit",
-      text: "Attendance Allowance:"
+      text: "Working Tax Credit"
     },
     {
       value: "childtaxcredit",
-      text: "Disability Living Allowance (DLA)"
+      text: "Child Tax Credit"
     },
     {
       value: "jsa",
-      text: "Severe Disablement Allowance"
+      text: "Jobseeker's Allowance (JSA)"
     }
   ]
 }) }}

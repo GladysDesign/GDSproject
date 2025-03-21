@@ -15,13 +15,13 @@ router.post('/benefit-selection-answer', function (req, res) {
     // Check whether the variable matches a condition
     if (selection == "low-income"){
       // Send user to next page
-      res.redirect('benefits/low-income')
+      res.redirect('benefit-claim/low-income')
     } else if (selection = 'disability'){
-        res.redirect('benefits/disability')
+        res.redirect('benefit-claim/disability')
     } else if (selection = 'families'){
-        res.redirect('benefits/families')
+        res.redirect('benefit-claim/families')
     }else if (selection = 'other'){
-        res.redirect('benefits/otherbenefits')
+        res.redirect('benefit-claim/otherbenefits')
     }
  
   
