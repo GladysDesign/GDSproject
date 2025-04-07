@@ -18,8 +18,6 @@
 
       <form class="form" action="/benefit-claim/tracking-number" method="post">
 
-        {% from "govuk/components/radios/macro.njk" import govukRadios %}
-
 {{ govukRadios({
   name: "lowincometype",
   fieldset: {

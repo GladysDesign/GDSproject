@@ -18,41 +18,40 @@
 
       <form class="form" action="/benefit-selection-answer" method="post">
 
-        {% from "govuk/components/radios/macro.njk" import govukRadios %}
+          {{ govukRadios({
+            name: "typeofbenefit",
+            value: data['typeofbenefit'],
+            fieldset: {
+              legend: {
+                text: "What type of benefit application are you checking?",
+                isPageHeading: true,
+                classes: "govuk-fieldset__legend--l"
+              }
+            },
+            items: [
+              {
+                value: "low-income",
+                text: "Low Income"
+              },
+              {
+                value: "disability",
+                text: "Disability and Health conditions"
+              },
+              {
+                value: "families",
+                text: "Familes"
+              },
+              {
+                value: "other",
+                text: "Other"
+              }
+            ]
+          }) }}
+          
 
-{{ govukRadios({
-  name: "whattypeofbenefit",
-  value: data['whattypeofbenefit'],
-  fieldset: {
-    legend: {
-      text: "What type of benefit application are you checking?",
-      isPageHeading: true,
-      classes: "govuk-fieldset__legend--l"
-    }
-  },
-  items: [
-    {
-      value: "low-income",
-      text: "Low Income"
-    },
-    {
-      value: "disability",
-      text: "Disability and Health conditions"
-    },
-    {
-      value: "families",
-      text: "Familes"
-    },
-    {
-      value: "other",
-      text: "Other"
-    }
-  ]
-}) }}
-
-        {{ govukButton({
-          text: "Continue"
-        }) }}
+          {{ govukButton({
+            text: "Continue"
+          }) }}
 
       </form>
 

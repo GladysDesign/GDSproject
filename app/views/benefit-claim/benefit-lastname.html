@@ -1,0 +1,43 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="../benefit/check-answers" method="post" novalidate>
+
+          {{ govukInput({
+            label: {
+              text: "What is the last name on the benefit application?",
+              classes: "govuk-label--l",
+              isPageHeading: true
+            },
+            id: "benefit-lastname",
+            value: data['benefit-lastname'],
+            name: "benefit-lastname",
+            autocomplete:"family-name"
+          }) 
+        }}
+
+        {{ govukButton({
+          text: "Continue"
+        }) 
+      }}
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

@@ -19,8 +19,6 @@
 
       <form class="form" action="/benefit-claim/tracking-number" method="post">
 
-        {% from "govuk/components/radios/macro.njk" import govukRadios %}
-
 {{ govukRadios({
   name: "lowincometype",
   fieldset: {
@@ -41,7 +39,7 @@
     },
     {
       value: "workingtaxcredit",
-      text: "Attendance Allowance:"
+      text: "Attendance Allowance"
     },
     {
       value: "childtaxcredit",

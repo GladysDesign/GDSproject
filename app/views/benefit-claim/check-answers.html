@@ -24,17 +24,17 @@
         rows: [
           {
             key: {
-              text: "Passport tracking number"
+              text: "Benefit tracking number"
             },
             value: {
-              text: data['passport-trackingNb']
+              text: data['benefit-trackingNb']
             },
             actions: {
               items: [
                 {
-                  href: "../passport/passport-tracking-nb",
+                  href: "../benefit/tracking-number",
                   text: "Change",
-                  visuallyHiddenText: "Passport tracking number"
+                  visuallyHiddenText: "Benefit tracking number"
                 }
               ]
             }
@@ -44,14 +44,14 @@
               text: "Last name"
             },
             value: {
-              text: data['passport-lastname']
+              text: data['benefit-lastname']
             },
             actions: {
               items: [
                 {
-                  href: "../passport/passport-lastname",
+                  href: "../benefit-claim/benefit-lastname",
                   text: "Change",
-                  visuallyHiddenText: "Passport last name"
+                  visuallyHiddenText: "Benefit last name"
                 }
               ]
             }
@@ -62,7 +62,7 @@
 
    
 
-      <form action="../passport/passport-status" method="post" novalidate>
+      <form action="../benefit/status" method="post" novalidate>
 
         {{ govukButton({
           text: "See status"
